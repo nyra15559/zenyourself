@@ -1,0 +1,22 @@
+workflows:
+  android-release:
+    name: Build Android Release
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      vars:
+        PROJECT_PATH: "zenyourself_complete_ui_final"
+    scripts:
+      - name: Get dependencies
+        script: |
+          cd $PROJECT_PATH
+          flutter pub get
+      - name: Build APK
+        script: |
+          cd $PROJECT_PATH
+          flutter build apk --release
+    artifacts:
+      - zenyourself_complete_ui_final/build/app/outputs/flutter-apk/app-release.apk
+
+Danach:

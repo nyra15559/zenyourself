@@ -1,0 +1,34 @@
+name: zenyourself
+description: ZenYourself App mit Sprach-Input und GPT-Antwort
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  speech_to_text: ^7.2.0
+  http: ^1.4.0
+  flutter_local_notifications: ^19.0.0
+  json_annotation: ^4.9.0
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo.png
+    - assets/zen_pattern.png
+    - assets/icon_voice.png
+    - assets/icon_send.png
+
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
